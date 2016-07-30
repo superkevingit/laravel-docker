@@ -1,7 +1,14 @@
-FROM php:5.6-apache
+FROM debian:jessie
 
 RUN apt-get update \ 
     && apt-get install -y \
+        nginx \
+        php-fpm \
+        php5-mysqlnd
+        php5-cli
+        supervisor \
+        curl \
+        php5-curl \
         libmcrypt-dev \
         libz-dev \
         git \
